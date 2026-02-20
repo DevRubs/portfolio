@@ -64,3 +64,21 @@ body {
 .blink {
   animation: blink 1s infinite;
 }
+
+@keyframes logoCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-carousel-track {
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  white-space: nowrap;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
