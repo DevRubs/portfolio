@@ -11,7 +11,8 @@ export default function ProjectModal({ project, isOpen, onClose }) {
         <>
           {/* Backdrop */}
           <motion.div
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-black/90 z-50"
+            style={{ willChange: 'opacity' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -21,10 +22,12 @@ export default function ProjectModal({ project, isOpen, onClose }) {
           {/* Modal */}
           <motion.div
             className="fixed inset-4 md:inset-10 lg:inset-20 bg-[#0a0a0a] border border-[#00ff9d]/50 z-50 overflow-y-auto"
+            style={{ willChange: 'transform, opacity' }}
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+            onClick={(e) => e.stopPropagation()}
           >
             {/* Terminal header */}
             <div className="sticky top-0 bg-[#0a0a0a] border-b border-[#1a1a1a] p-4 flex justify-between items-center">
@@ -133,17 +136,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                       [VIEW_CODE]
                     </a>
                   )}
-                  {project.demo && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 bg-[#00ff9d] text-[#0a0a0a] text-sm font-bold hover:bg-[#00cc7d] transition-colors"
-                      data-hover
-                    >
-                      [LIVE_DEMO]
-                    </a>
-                  )}
+
                 </div>
               )}
             </div>

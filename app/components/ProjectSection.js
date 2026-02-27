@@ -1,10 +1,8 @@
 'use client';
 
-import { useState, lazy, Suspense } from 'react';
+import { useState } from 'react';
 import ScrollReveal from './ScrollReveal';
-
-// Lazy load the modal
-const ProjectModal = lazy(() => import('./ProjectModal'));
+import ProjectModal from './ProjectModal';
 
 const projects = [
   {
@@ -129,15 +127,13 @@ export default function ProjectsSection() {
         </div>
       </div>
 
-      {/* Lazy loaded modal */}
-      {isModalOpen && (
-        <Suspense fallback={null}>
-          <ProjectModal 
-            project={selectedProject} 
-            isOpen={isModalOpen} 
-            onClose={closeModal} 
-          />
-        </Suspense>
+      {/* Project Modal */}
+      {selectedProject && (
+        <ProjectModal 
+          project={selectedProject} 
+          isOpen={isModalOpen} 
+          onClose={closeModal} 
+        />
       )}
     </section>
   );
