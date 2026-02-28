@@ -1,10 +1,10 @@
 export default function About() {
     return (
-      <section id="about" className="px-4 md:px-12 lg:px-32 py-20 border-t border-[#1a1a1a]">
+      <section id="about" className="px-4 md:px-12 lg:px-32 py-16 md:py-20 border-t border-[#1a1a1a]">
         <div className="max-w-3xl mx-auto">
-          <p className="text-[#00ff9d] text-xs md:text-sm mb-4">{'>'} about.read()</p>
+          <p className="text-[#00ff9d] text-xs md:text-sm mb-4">About</p>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#e0e0e0] mb-8">
-            ABOUT_
+            About
           </h2>
   
           <div className="space-y-4 md:space-y-6 text-[#666666]">

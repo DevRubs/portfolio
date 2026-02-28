@@ -66,12 +66,12 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="projects" className="px-4 md:px-12 lg:px-32 py-20 border-t border-[#1a1a1a]">
+    <section id="projects" className="px-4 md:px-12 lg:px-32 py-16 md:py-20 border-t border-[#1a1a1a]">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
-          <p className="text-[#00ff9d] text-xs md:text-sm mb-4">{'>'} projects.fetch()</p>
+          <p className="text-[#00ff9d] text-xs md:text-sm mb-4">Projects</p>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#e0e0e0] mb-4">
-            PROJECTS_
+            Projects
           </h2>
           <p className="text-[#666666] text-sm md:text-base mb-8">
             Click a card to view details.
@@ -97,7 +97,7 @@ export default function ProjectsSection() {
                     {project.status}
                   </span>
                   <span className="text-[#666666] text-xs group-hover:text-[#00ff9d] transition-colors">
-                    [CLICK_TO_OPEN]
+                    Click to open
                   </span>
                 </div>
 

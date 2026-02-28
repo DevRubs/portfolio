@@ -42,14 +42,14 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 className="text-[#666666] hover:text-[#00ff9d] transition-colors text-sm"
                 data-hover
               >
-                [CLOSE]
+                Close
               </button>
             </div>
 
             {/* Content */}
             <div className="p-4 md:p-8">
               {/* Title */}
-              <p className="text-[#00ff9d] text-xs md:text-sm mb-2">{'>'} project.open("{project.id}")</p>
+              <p className="text-[#00ff9d] text-xs md:text-sm mb-2">Project Details</p>
               <h2 className="text-2xl md:text-4xl font-bold text-[#e0e0e0] mb-6">
                 {project.title}
               </h2>
@@ -68,7 +68,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               {/* Project Image */}
               {project.image && (
                 <div className="mb-8">
-                  <p className="text-[#00ff9d] text-xs mb-3">{'>'} project.screenshot()</p>
+                  <p className="text-[#00ff9d] text-xs mb-3">Screenshot</p>
                   <div className="border border-[#1a1a1a] p-4">
                     <img
                       src={project.image}
@@ -81,7 +81,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
               {/* Description */}
               <div className="mb-8">
-                <p className="text-[#00ff9d] text-xs mb-2">{'>'} description</p>
+                <p className="text-[#00ff9d] text-xs mb-2">Description</p>
                 <p className="text-[#e0e0e0] text-sm md:text-base leading-relaxed">
                   {project.fullDescription || project.description}
                 </p>
@@ -90,7 +90,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               {/* The Problem */}
               {project.problem && (
                 <div className="mb-8">
-                  <p className="text-[#00ff9d] text-xs mb-2">{'>'} problem.solved()</p>
+                  <p className="text-[#00ff9d] text-xs mb-2">Problem Solved</p>
                   <p className="text-[#666666] text-sm md:text-base leading-relaxed">
                     {project.problem}
                   </p>
@@ -100,7 +100,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               {/* The Solution */}
               {project.solution && (
                 <div className="mb-8">
-                  <p className="text-[#00ff9d] text-xs mb-2">{'>'} solution.implemented()</p>
+                  <p className="text-[#00ff9d] text-xs mb-2">Solution Implemented</p>
                   <p className="text-[#666666] text-sm md:text-base leading-relaxed">
                     {project.solution}
                   </p>
@@ -109,7 +109,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
               {/* Tech Stack */}
               <div className="mb-8">
-                <p className="text-[#00ff9d] text-xs mb-3">{'>'} stack.list()</p>
+                <p className="text-[#00ff9d] text-xs mb-3">Technologies Used</p>
                 <div className="flex flex-wrap gap-2">
                   {project.stack.map((tech) => (
                     <span 
@@ -133,7 +133,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                       className="px-4 py-2 border border-[#00ff9d] text-[#00ff9d] text-sm hover:bg-[#00ff9d]/10 transition-colors"
                       data-hover
                     >
-                      [VIEW_CODE]
+                      View Code
                     </a>
                   )}
 

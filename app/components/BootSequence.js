@@ -44,7 +44,7 @@ export default function BootSequence({ onComplete }) {
           animate={{ opacity: stage >= 0 ? 1 : 0 }}
           className="text-[#00ff9d]"
         >
-          {'>'} RUBEN_OS v1.0.0
+          Welcome to my portfolio
         </motion.p>
 
         <motion.p
@@ -52,7 +52,7 @@ export default function BootSequence({ onComplete }) {
           animate={{ opacity: stage >= 1 ? 1 : 0 }}
           className="text-[#666666] mt-1"
         >
-          {'>'} Initializing system...
+          Setting things up...
         </motion.p>
 
         <motion.p
@@ -60,7 +60,7 @@ export default function BootSequence({ onComplete }) {
           animate={{ opacity: stage >= 2 ? 1 : 0 }}
           className="text-[#666666] mt-1"
         >
-          {'>'} Loading modules...
+          Loading content...
         </motion.p>
 
         <motion.div
@@ -86,7 +86,7 @@ export default function BootSequence({ onComplete }) {
           animate={{ opacity: stage >= 3 ? 1 : 0 }}
           className="text-[#00ff9d] mt-4"
         >
-          {'>'} System ready.
+          Ready to explore!
         </motion.p>
       </div>
 
@@ -94,7 +94,7 @@ export default function BootSequence({ onComplete }) {
         onClick={onComplete}
         className="absolute bottom-8 text-[#666666] text-xs hover:text-[#00ff9d] transition-colors"
       >
-        [SKIP]
+        Skip
       </button>
     </motion.div>
   );

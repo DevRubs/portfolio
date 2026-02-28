@@ -6,11 +6,11 @@ const socials = [
   
   export default function ContactSection() {
     return (
-      <section id="contact" className="px-4 md:px-12 lg:px-32 py-20 border-t border-[#1a1a1a]">
+      <section id="contact" className="px-4 md:px-12 lg:px-32 py-16 md:py-20 border-t border-[#1a1a1a]">
         <div className="max-w-2xl mx-auto">
-          <p className="text-[#00ff9d] text-xs md:text-sm mb-4">{'>'} contact.init()</p>
+          <p className="text-[#00ff9d] text-xs md:text-sm mb-4">Contact</p>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#e0e0e0] mb-4">
-            CONTACT_
+            Contact
           </h2>
           <p className="text-[#666666] text-sm md:text-base mb-8">
             Have a project? Need an automation? Let&apos;s talk.
@@ -26,7 +26,7 @@ const socials = [
                 className="block p-3 md:p-4 border border-[#1a1a1a] hover:border-[#00ff9d] transition-colors group"
                 data-hover
               >
-                <div className="text-[#00ff9d] text-xs md:text-sm mb-1">[{social.label}]</div>
+                <div className="text-[#00ff9d] text-xs md:text-sm mb-1">{social.label}</div>
                 <div className="text-[#e0e0e0] text-sm md:text-base group-hover:text-[#00ff9d] transition-colors break-all">
                   {social.value}
                 </div>
@@ -44,7 +44,7 @@ const socials = [
             data-hover
           >
             <p className="text-[#00ff9d] text-sm md:text-base font-bold mb-1">
-              [BOOK_A_CALL]
+              Book a Call
             </p>
             <p className="text-[#666666] text-xs md:text-sm">
               Skip the emails. Let&apos;s talk directly.
